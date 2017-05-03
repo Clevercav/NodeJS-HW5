@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-<script src="public/client.js"></script>
-
+	<title>HW5</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-<body>
-HI XD
+<body ng-app="myApp" ng-controller="MainCtrl">
+
+
+<h1>HW5</h1>
+<ul>
+	<!-- GET ALL TWEETS -->
+	<li><button ng-click="getAllTweets()">Get all Tweets</button></li>
+
+	<!-- GET TWEET BY ID -->
+	<li><input type="text" ng-model="tweetid" placeholder="Write tweet ID here"><button ng-click="gettweetbyid()">Get tweet by ID</button></li>
+
+	<!-- GET ALL USERS -->
+	<li><button ng-click="getusers()">Get Users</button></li>
+
+	<!-- GET KNOWN TWITTER USER -->
+	<li><input type="text" ng-model="name" placeholder="Write screen name here"><button ng-click="getuserbyname()">Get known Twitter user</button></li>
+
+	<!-- GET ALL LINKS -->
+	<li><button ng-click="getlinks()">Get all links</button></li>
+</ul>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th ng-repeat="header in tableheaders">{{header}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="obj in result">
+			<td ng-repeat="thing in obj">{{thing}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<script src="public/client.js"></script>
 </body>
 </html>
