@@ -124,9 +124,9 @@ app.get('/getlinks', function(req, res) {
 //TO ACCESS THE JAVASCRIPT AND CSS FILES (CLIENT.JS AND STYLE.CSS) FROM INDEX.HTML
 app.use("/public", express.static(__dirname + '/public'));
 
-var server = app.listen(443, function () {
+var port = process.env.PORT || 8080;
 
-  var port = server.address().port
+var server = app.listen(port, function () {
 
   console.log("Listening on port %s", port)
 
