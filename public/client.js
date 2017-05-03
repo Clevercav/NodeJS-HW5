@@ -2,10 +2,10 @@ var app = angular.module('myApp', []);
 
 app.controller('MainCtrl', function($scope, $http) {
 
-	//CREATES DYNAMIC TABLE DEPENDING ON HTTP RESULT
+	//CREATES DYNAMIC TABLE DEPENDING ON RESULT
 	function createTable(list) {
 
-		//GET ALL KEYS (USE FOR TABLE HEADERS)
+		//GET ALL KEYS (USE FOR COLUMN HEADERS)
 		var keys = [];
 
 		for (var k in list[0]){
@@ -14,8 +14,8 @@ app.controller('MainCtrl', function($scope, $http) {
 		    }
 		}
 
-		//SET TABLE HEADERS
-		$scope.tableheaders = keys;
+		//SET COLUMN HEADERS
+		$scope.columnheaders = keys;
 		
 		//SET OUR LIST (RESPONSE) TO RESULT
 		$scope.result = list;		

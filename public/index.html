@@ -13,28 +13,32 @@
 
 
 <h1>HW5</h1>
+
+<h3>Made with AngularJS (Frontend) and NodeJS (Backend)</h3>
+
 <ul>
 	<!-- GET ALL TWEETS -->
-	<li><button ng-click="getAllTweets()">Get all Tweets</button></li>
+	<li><button class="btn btn-primary" ng-click="getAllTweets()">Get all Tweets</button></li>
 
 	<!-- GET TWEET BY ID -->
-	<li><input type="text" ng-model="tweetid" placeholder="Write tweet ID here"><button ng-click="gettweetbyid()">Get tweet by ID</button></li>
+	<li><input type="text" ng-model="tweetid" placeholder="Write tweet ID here"><button class="btn btn-primary" ng-click="gettweetbyid()">Get tweet by ID</button></li>
 
 	<!-- GET ALL USERS -->
-	<li><button ng-click="getusers()">Get Users</button></li>
+	<li><button class="btn btn-primary" ng-click="getusers()">Get Users</button></li>
 
 	<!-- GET KNOWN TWITTER USER -->
-	<li><input type="text" ng-model="name" placeholder="Write screen name here"><button ng-click="getuserbyname()">Get known Twitter user</button></li>
+	<li><input type="text" ng-model="name" placeholder="Write screen name here"><button class="btn btn-primary" ng-click="getuserbyname()">Get known Twitter user</button></li>
 
 	<!-- GET ALL LINKS -->
-	<li><button ng-click="getlinks()">Get all links</button></li>
+	<li><button class="btn btn-primary" ng-click="getlinks()">Get all links</button></li>
 </ul>
 
 
+<!-- RESULT TABLE -->
 <table class="table">
 	<thead>
 		<tr>
-			<th ng-repeat="header in tableheaders">{{header}}</th>
+			<th ng-repeat="header in columnheaders">{{header}}</th>
 		</tr>
 	</thead>
 	<tbody>
